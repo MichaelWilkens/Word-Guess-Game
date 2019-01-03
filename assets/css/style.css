@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    text-shadow: 1px 1px white;
+    color: #404040;
+}
+
+body {
+    min-width: 700px;
+}
+
+#background-video {
+    width: 100vw;
+    height: 116vh;
+    z-index: -100;
+    position:fixed;
+    top: 0;
+    left: 0;
+    margin-top: -58px;
+}
+
+#background-video {
+    opacity: 0.5;
+}
+
+#rendezvous {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    letter-spacing: 2px;
+    margin-top: 5%;
+    margin-left: 30%
+}
+
+#wrapper2 {
+    max-width: 50vw;
+    min-width: 600px;
+}
+
+
+.win-message {
+    text-align: center;
+    color: white;
+    display: none;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.page-element p {
+    font-weight: bold;
+}
+
+.page-element {
+    flex-basis: 50%;
+    
+}
+
+object {
+    opacity: 0;
+}
+
+#current-word{
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+#letters-guessed,
+#guesses-remaining,
+#wins,
+#losses {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #background-video {
+        min-width: 120vw;
+    }    
+    #wrapper {
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    #background-video {
+        min-width: 900px;
+    }    
+    #wrapper {
+        margin-top: 20%;
+    }
+    .wrap {
+        margin-left: 10%;
+    }
+}
+
+
+  
+ 
+ 

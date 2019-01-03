@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hangman</title>
+        <link rel="shortcut icon" type="image/png" href="assets/images/hangman.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../../../normalize.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway" rel="stylesheet">
+    </head>
+
+    <body id='body'>
+        <iframe width="100%" height="100%" id='background-video' src="https://www.youtube.com/embed/ShRxdn7gNco?autoplay=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+
+        <iframe id='rendezvous' width="100" height="100" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+
+
+        <p class = 'win-message' id='win-message-title'>You Win! </p>
+        <p class = 'win-message' id='win-message'>Enjoy this Ferrari 275 GTB racing through Paris.</p> 
+
+
+        <div id='wrapper' class='wrap'>
+            <div class = 'main-body'>
+                <h1 class='text page-element'>Car Hangman</h1>
+                
+                <br>
+
+                <div class='page-element'>
+                    <p id='current-word'></p>
+                </div>
+
+                <div>
+                    <h3>Country: <span id='country'></span></h3>
+                </div>
+
+                <div>
+                    <h3 id='old-car-message'>(Previous car: <span id='old-car'></span>)</h3>
+                </div>
+            </div>
+
+            <svg class='text' version="1.1"
+                baseProfile="full"
+                width="210" height="210"
+                xmlns="http://www.w3.org/2000/svg"
+                id = 'hangman'>
+
+                <rect class='base' width="40%" height="1%" fill="black" x='40' y='200'/>
+                <rect class='vertical-post' width='1.25%' height='80%' fill='black' x='80' y='34'/>
+                <rect class='top' width='35%' height='1%' fill='black' x='80' y='32'/>
+                <rect class='hanging-post' width='1%' height='15%' fill='black' x='152' y='32'/>/>
+
+                <circle class = 'figure head 1'  cx="153" cy="80" r="15" stroke = 'black' stroke-width = '2.5' fill='none' opacity='1'/>
+                <rect class='figure body 2' width='1%' height='30%' fill='black' x='152' y='95' opacity='1'/>/>
+                <rect class='figure left-arm 3' width='1%' height='15%' fill='black' x='153' y='120' transform = "rotate(135 153 120)" opacity='1'/>
+                <rect class='figure right-arm 4' width='1%' height='15%' fill='black' x='153' y='122' transform = "rotate(-135 153 122)" opacity='1'/>
+                <rect class='figure left-leg 5' width='1%' height='15%' fill='black' x='153' y='158' transform = "rotate(45 153 158)" opacity='1'/>
+                <rect class='figure right-leg 6' width='1%' height='15%' fill='black' x='153' y='160' transform = "rotate(-45 153 160)" opacity='1'/>
+            </svg>
+        </div>
+        
+        <div id='wrapper2' class='wrap'>
+            <div class='page-element'>
+                <h3>Letters Guessed</h3>
+                <p id='letters-guessed'></p>
+            </div>
+        
+            <div class='page-element second'>
+                <h3>Wins</h3>
+                <p><span id='wins'>0</span>/63</p>
+            </div>
+
+            <div class='page-element'>
+                <h3>Remaining</h3>
+                <p id='guesses-remaining'></p>
+            </div>
+
+            <div class='page-element second'>
+                <h3>Wrong Guesses</h3>
+                <p id ='losses'>0</p>
+            </div>
+        </div>
+        
+        <object>
+                <embed id='load-sound' type='audio/wav'/>
+        </object>    
+
+        <script src='assets/javascript/game.js'></script>
+    </body>
+</html>
