@@ -139,7 +139,7 @@ document.addEventListener('keypress', (event) => {
             }
             correctGuess();
             
-            if (cars.length === 60){
+            if (cars.length === 0){
                 document.getElementById('rendezvous').style.display = 'block';
                 
                 document.getElementById('background-video').style.display = 'none';
